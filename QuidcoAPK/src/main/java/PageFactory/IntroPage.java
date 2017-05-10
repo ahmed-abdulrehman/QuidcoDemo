@@ -1,19 +1,17 @@
 package PageFactory;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Config.Utility;
+import io.appium.java_client.android.AndroidDriver;
 
 public class IntroPage {
 	
-	public WebDriver driver;
+	public AndroidDriver driver;
 	Utility utility;
 	
 	// Skip button element
@@ -24,7 +22,7 @@ public class IntroPage {
 	@FindBy(id = "com.quidco:id/join_button")
 	private WebElement joinUsButton;
 	
-	public IntroPage(WebDriver driver) {
+	public IntroPage(AndroidDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

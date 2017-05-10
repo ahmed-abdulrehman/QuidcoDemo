@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 
-import Config.Utility;
 import Test.Setup;
 import io.appium.java_client.android.AndroidDriver;
 

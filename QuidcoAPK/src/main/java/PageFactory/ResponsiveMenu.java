@@ -4,17 +4,17 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import Config.Utility;
+import io.appium.java_client.android.AndroidDriver;
 
 public class ResponsiveMenu {
 
-	public WebDriver driver;
+	public AndroidDriver driver;
 	Utility utility;
 
 	// Page title element
@@ -41,7 +41,7 @@ public class ResponsiveMenu {
 	@FindBy(id = "com.quidco:id/last_name_edit_text")
 	private WebElement lastName;
 
-	public ResponsiveMenu(WebDriver driver) {
+	public ResponsiveMenu(AndroidDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
